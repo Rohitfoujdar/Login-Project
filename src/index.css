@@ -5,9 +5,61 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rebeccapurple;
+  background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbar{
+  background-color: lightcoral;
+  background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.logo{
+  cursor: pointer;
+}
+
+.nav-link{
+  margin-top: 15px;
+  margin-left: 40px;
+  font-weight: 500;
+  color: white;
+}
+.container{
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.Card{
+  text-align: center;
+  width: 500px;
+  height: 250px;
+  margin-top: 100px;
+  margin-left: 450px;
+  padding-top: 40px;
+  border-radius: 10px;
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+.input-2{
+  margin-top: 20px; 
+  border-radius: 50px;
+}
+
+.log-btn{
+  margin-top: 20px;
+  width: auto;
+}
+
