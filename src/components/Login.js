@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 // import { Link } from 'react-router-dom';
 
 const requiredData = {
-  username: "R",
+  username: "Rohit",
   password: "123",
   email: "rohitfoujdar8696@gmail.com"
 }
 
-export default function Login() {
+export default function Login({ setIsLoggedIn }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -26,6 +26,7 @@ export default function Login() {
     if (username === requiredData.username && password === requiredData.password) {
       setError(""); 
       alert("Login successful!");
+      setIsLoggedIn(true); 
       navigate("/");
     } else {
       setError("Incorrect username or password. Please try again.");
@@ -53,7 +54,7 @@ export default function Login() {
         />
       </div>
       <div className="log-btn">
-       <button type="button"onClick={handleLogin} class="btn btn-outline-warning">Submit</button>
+       <button type="button"onClick={handleLogin} className="btn btn-outline-warning">Submit</button>
       </div>
     </div>
   );
