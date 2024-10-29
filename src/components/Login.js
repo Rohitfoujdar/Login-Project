@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 // import { Link } from 'react-router-dom';
 
 const requiredData = {
-  username: "Rohit",
+  username: "Rohit Foujdar",
   password: "123",
   email: "rohitfoujdar8696@gmail.com"
 }
@@ -25,11 +26,12 @@ export default function Login({ setIsLoggedIn }) {
   const handleLogin = () => {
     if (username === requiredData.username && password === requiredData.password) {
       setError(""); 
-      alert("Login successful!");
-      setIsLoggedIn(true); 
+      localStorage.setItem("name",username)
       navigate("/");
+      toast.success("Login successful!");
+      setIsLoggedIn(true); 
     } else {
-      setError("Incorrect username or password. Please try again.");
+      toast.error("Incorrect username or password. Please try again.");
     }
   };
 

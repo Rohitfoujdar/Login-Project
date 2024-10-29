@@ -5,10 +5,13 @@ import { Link, useNavigate } from "react-router-dom";
 
 
 export default function Navbar({ isLoggedIn, setIsLoggedIn }) {
+
+  const name= localStorage.getItem("name")
   const navigate = useNavigate();
   const handleLogout = () => {
     setIsLoggedIn(false); // Update login status to false on logout
     navigate("/login");
+    localStorage.removeItem("name")
   };
     return(
         <div>
@@ -21,6 +24,7 @@ export default function Navbar({ isLoggedIn, setIsLoggedIn }) {
              <Link to="/" className="nav-link active" aria-current="page" href="/">Home</Link>
             </div>
             <form className="d-flex" role="search">
+             {name && <p className="name">Hii, {name}</p>}
              {isLoggedIn ? (
               <button className="btn btn-outline-success" type="submit" onClick={handleLogout}>Logout</button>
               ) : (

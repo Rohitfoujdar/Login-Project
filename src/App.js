@@ -3,6 +3,8 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Login from './components/Login';
 import {  BrowserRouter, Routes ,Route,} from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import React, { useState } from "react";
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
        </Routes>
      </BrowserRouter>
+     <ToastContainer />
     </div>
   );
 }
